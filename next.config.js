@@ -14,12 +14,16 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "*.replicate.delivery",
+        hostname: "pokemonletsgo.pokemon.com",
       },
       {
         protocol: "https",
-        hostname: "user-images.githubusercontent.com",
+        hostname: "images.secretlab.co",
       },
+      {
+        protocol: "https",
+        hostname: "assets.nintendo.com",
+      }
     ],
   },
   async redirects() {
@@ -33,7 +37,7 @@ const nextConfig = {
         source: "/deploy",
         destination: "https://vercel.com/templates/next.js/paint-by-text",
         permanent: false,
-      },   
+      },
     ]
   }
 };

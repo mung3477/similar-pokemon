@@ -10,7 +10,7 @@ export const appSubtitle = "사진을 업로드하고, 닮은 꼴 포켓몬을 �
 export const appMetaDescription = "사진을 업로드하고, 닮은 꼴 포켓몬을 찾아보세요!";
 
 export default function Home() {
-  const {uploadedImages, error, loading, handleFileChange, handleUpload}  = useSearch()
+  const {preview, uploadedImages, error, loading, handleFileChange, handleUpload}  = useSearch()
 
   return (
     <div>
@@ -29,6 +29,7 @@ export default function Home() {
           </p>
         </hgroup>
         <Search
+          preview={preview}
           uploadedImages={uploadedImages}
           loading={loading}
           handleFileChange={handleFileChange}
