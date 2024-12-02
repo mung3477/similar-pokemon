@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Loader from 'react-spinners/HashLoader';
 
 export default function Search({
 	preview,
@@ -42,7 +43,12 @@ export default function Search({
 					</>
 				)}
 			</div>
-			{loading && <p className="text-[24px] font-semibold">로딩 중...</p>}
+			{loading && (
+				<div className="my-16">
+					<Loader color="#1edac5" size={100} />
+					<p className="mt-8 text-[#1edac5]">유사도 비교 중...</p>
+				</div>
+			)}
 			{uploadedImages.length > 0 && (
 				<div className="mt-6">
 					<h3 className="text-lg">가장 닮은 3개의 포켓몬:</h3>
