@@ -42,6 +42,7 @@ export default function Search({
 					</>
 				)}
 			</div>
+			{loading && <p className="text-[24px] font-semibold">로딩 중...</p>}
 			{uploadedImages.length > 0 && (
 				<div className="mt-6">
 					<h3 className="text-lg">가장 닮은 3개의 포켓몬:</h3>
