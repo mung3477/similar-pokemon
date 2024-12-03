@@ -1,8 +1,5 @@
-import {
-  Code as CodeIcon,
-  XCircle as StartOverIcon,
-} from 'lucide-react';
-import Link from 'next/link';
+import { Code as CodeIcon, XCircle as StartOverIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer({ onClickStartOver }) {
 	return (
@@ -38,10 +35,7 @@ export default function Footer({ onClickStartOver }) {
 
 			<div className="text-center lil-text mt-8">
 				Powered by{" "}
-				<Link
-					href="https://modal.comhttps://www.timothybrooks.com/instruct-pix2pix/"
-					target="_blank"
-				>
+				<Link href="https://modal.com" target="_blank">
 					Modal labs
 				</Link>
 				,{" "}
