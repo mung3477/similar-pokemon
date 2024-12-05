@@ -53,19 +53,21 @@ export default function Search({
 				<div className="mt-6">
 					<h3 className="text-lg">가장 닮은 3개의 포켓몬:</h3>
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-[12px]">
-						{uploadedImages.map((imgUrl, index) => (
-							<Image
-								key={imgUrl}
-								src={imgUrl}
-								alt={`Result ${index + 1}`}
-								width={300}
-								height={300}
-								style={{
-									margin: "10px",
-									width: "200px",
-									height: "200px",
-								}}
-							/>
+						{uploadedImages.map(({ src, name }) => (
+							<div key={src}>
+								<Image
+									src={src}
+									alt={name}
+									width={300}
+									height={300}
+									style={{
+										margin: "10px",
+										width: "200px",
+										height: "200px",
+									}}
+								/>
+								<p className="mt-4">{name}</p>
+							</div>
 						))}
 					</div>
 				</div>
@@ -75,6 +77,7 @@ export default function Search({
 					type="file"
 					onChange={handleFileChange}
 					accept="image/*"
+					disabled={loading}
 				/>
 				<button
 					onClick={handleUpload}
