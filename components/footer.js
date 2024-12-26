@@ -24,7 +24,7 @@ export default function Footer({ onClickStartOver }) {
 				<div className="inline-block py-2 px-4 border border-yellow-200 rounded-lg bg-[#fef6aa]">
 					🤔 프로젝트가 마음에 드셨나요?{" "}
 					<Link
-						href="https://github.com/mung3477/similar-pokemon"
+						href="https://github.com/AIKU-Official/aiku-24-2-similar-pokemon"
 						target="_blank"
 					>
 						여기
@@ -47,7 +47,7 @@ export default function Footer({ onClickStartOver }) {
 					href="https://aiku.notion.site/AIKU-b614c69220704b848758e5cf21a54238?pvs=74"
 					target="_blank"
 				>
-					AIKU
+					{" AIKU"}
 				</Link>
 			</div>
 		</footer>
